@@ -1,9 +1,11 @@
+#include "functions.h"
+
 void welcome_player(void)
 {
     printf("Welcome to Blackjack!\n");
     printf("Skip rules? (y/n)");
     char answer = getchar();
-    if (tolower(answer) == 'y')
+    if (tolower(answer) == 'n')
     {
         printf("The rules are simple: \n"
                "You get 2 cards. You can see one of the dealers' cards. "
