@@ -1,17 +1,4 @@
-#include <ctype.h>
-#include <stdio.h>
-
-const char *cards[] = {
-    "2", "3", "4", "5", "6", "7", "8",
-    "9", "10", "J", "Q", "K", "A"
-};
-const char suits[] = {'C', 'S', 'H', 'D'};
-const int values[] = {
-    2, 3, 4, 5, 6, 7, 8,
-    9, 10, 10, 10, 10, 11
-};
-
-int main(void)
+void welcome_player(void)
 {
     printf("Welcome to Blackjack!\n");
     printf("Skip rules? (y/n)");
@@ -22,7 +9,11 @@ int main(void)
                "You get 2 cards. You can see one of the dealers' cards. "
                "The objective is to get 21 points. The value of cards from "
                "2 to 10 is obvious. Face cards are worth 10. Aces are worth either "
-               "1 or 11 points, depending on if it being 11 makes you lose.");
+               "1 or 11 points, depending on if it being 11 makes you lose.\n"
+               "You have to options:\n"
+               "Hit: Take another card, which could lead to a loss if "
+               "your total after taking that card is bigger than 21.\n"
+               "Stay: Don't do anything and wait for the dealer"
+               "to play.\n ");
     }
-
 }
